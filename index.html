@@ -1,134 +1,261 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enthropy Systems</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #333;
-      background: #f8f8f8;
-    }
-    .hero {
-      background: linear-gradient(135deg, #1e2a38, #2c3e50, #34495e);
-      text-align: center;
-      padding: 120px 20px;
-      color: white;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: -100%;
-      width: 60%; height: 100%;
-      background: linear-gradient(to right, transparent, rgba(255,255,255,0.1), transparent);
-      transform: skewX(-25deg);
-      animation: shine 10s infinite linear;
-      pointer-events: none;
-    }
-    @keyframes shine {
-      0% { left: -100%; }
-      100% { left: 100%; }
-    }
-    h1 {
-      font-size: 3rem;
-      margin: 0 0 20px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-    }
-    .subtitle {
-      font-size: 1.4rem;
-      margin-bottom: 50px;
-      font-weight: 300;
-      opacity: 0.95;
-    }
-    .waitlist-form {
-      max-width: 500px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      gap: 0;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
-    input[type="email"] {
-      flex: 1;
-      max-width: 320px;
-      padding: 16px 20px;
-      border: none;
-      border-radius: 8px 0 0 8px;
-      font-size: 1.1rem;
-      background: white;
-      color: #333;
-    }
-    input[type="email"]::placeholder {
-      color: #999;
-    }
-    .waitlist-form button {
-      padding: 16px 40px;
-      background: #d0d0d0;
-      color: #1e1e1e;
-      border: none;
-      border-radius: 0 8px 8px 0;
-      font-size: 1.1rem;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .waitlist-form button:hover {
-      background: #e0e0e0;
-    }
-    .about {
-      max-width: 1000px;
-      margin: 100px auto;
-      padding: 0 20px;
-      text-align: center;
-      line-height: 1.8;
-      color: #444;
-    }
-    .about h2 {
-      font-size: 2.2rem;
-      margin-bottom: 40px;
-      color: #2c3e50;
-    }
-    .about p {
-      max-width: 900px;
-      margin: 20px auto;
-      font-size: 1.1rem;
-    }
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: #888;
-      font-size: 0.9rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entropy Systems | Geometric Intelligence for the Next Frontier</title>
+    <meta name="description" content="Entropy Systems pioneers geometric coordination for trillion-scale systems through three integrated lines of business: Sensors, Materials, and Methods.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f0f0f;
+            --text: #f0f0f0;
+            --accent: #00d4ff;
+            --secondary: #a0a0a0;
+            --card-bg: #1a1a1a;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        header {
+            padding: 2rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            color: var(--accent);
+        }
+        nav a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--accent);
+        }
+        .hero {
+            padding: 8rem 5% 6rem;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--accent);
+            color: #000;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,212,255,0.3);
+        }
+        .business-lines {
+            padding: 6rem 5%;
+            background: #111;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 4rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2.5rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2.5rem;
+            border: 1px solid #2a2a2a;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+        }
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        .whitepaper {
+            padding: 8rem 5%;
+            background: linear-gradient(135deg, #000 0%, #0a1a2f 100%);
+            text-align: center;
+        }
+        .whitepaper-cover {
+            max-width: 600px;
+            margin: 0 auto 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+        }
+        .whitepaper-cover img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        .form-section {
+            padding: 6rem 5%;
+            background: #0a0a0a;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        input, textarea {
+            padding: 1rem;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 8px;
+            color: var(--text);
+            font-family: inherit;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #666;
+        }
+        button {
+            background: var(--accent);
+            color: #000;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            grid-column: span 2;
+        }
+        footer {
+            padding: 3rem 5%;
+            text-align: center;
+            border-top: 1px solid #2a2a2a;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.8rem; }
+            header { flex-direction: column; gap: 1rem; }
+            nav a { margin: 0 1rem; }
+            form { grid-template-columns: 1fr; }
+            button { grid-column: 1; }
+        }
+    </style>
 </head>
 <body>
 
-  <section class="hero">
-    <h1>Welcome to Enthropy Systems</h1>
-    <p class="subtitle">Patent-Pending Geometry Embodiments for Superior Human/AI/Hybrid Orchestration</p>
+    <header>
+        <div class="logo">Entropy<span>Systems</span></div>
+        <nav>
+            <a href="#business">Lines of Business</a>
+            <a href="#whitepaper">Whitepaper</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <!-- Waitlist form -->
-    <form class="waitlist-form" action="https://formspree.io/f/xkowgkpj" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required autocomplete="email">
-      <button type="submit">Join the Waitlist</button>
-    </form>
-  </section>
+    <section class="hero">
+        <h1>Measuring What Others Cannot See</h1>
+        <p>Entropy Systems pioneers the next frontier of intelligence through geometric perception of the substrate that coordinates everything — from trillion-scale distributed systems to emerging heterogeneous hardware.</p>
+        <p>We deliver this vision through three integrated lines of business:</p>
+        <a href="#business" class="cta-button">Explore Our Three Lines</a>
+    </section>
 
-  <section class="about">
-    <h2>About Us</h2>
-    <p>Enthropy Systems orchestrates heterogeneous agents, manages geometric divergence, and ensures resilient computation across domain substrates.</p>
-    <p>Our frameworks prevent dominance in multi-agent systems, enable equitable networks, and provide hardware-agnostic solutions for human-AI teaming, privacy-preserving identities, neuromorphic computing, quantum hybrids, swarm robotics, neural interfaces, and more.</p>
-    <p>These embodiments are grounded in perpendicular divergence metrics, entropy modulation, Grassmannian manifolds, cosmic substrate OS, thermodynamic holonomy, and self-healing kernels—tailored to avoid overbroad “free-for-all” geometry claims while delivering robust, scalable results.</p>
-  </section>
+    <section class="business-lines" id="business">
+        <div class="container">
+            <h2 class="section-title">Three Lines of Business</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Sensors</h3>
+                    <p>Purpose-built geometric instruments that natively detect holonomy accumulation, free-energy curvature, and sheaf consistency — phenomena invisible to conventional statistical sensors. These enable early detection of phase transitions, Byzantine behavior, and subspace alignment in complex systems.</p>
+                </div>
+                <div class="card">
+                    <h3>Materials</h3>
+                    <p>Next-generation substrates optimized for geometric coherence. We design and characterize materials that support intrinsic holonomy bounds, topological protection, and entropy-weighted phase behavior — creating hardware foundations for coordination without message-passing overhead.</p>
+                </div>
+                <div class="card">
+                    <h3>Methods</h3>
+                    <p>Patented geometric coordination frameworks (provisional patents 1a–5a) for orchestration across classical, neural, neuromorphic, and quantum strata. Proven logarithmic scaling, formal consistency guarantees, and leading indicators for trillion-scale distributed intelligence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    &copy; 2025-2026 Enthropy Systems an Interim Division of AFX Colombia S.A.S. All rights reserved.
-  </footer>
+    <section class="whitepaper" id="whitepaper">
+        <div class="container">
+            <h2 class="section-title">Featured Whitepaper</h2>
+            <div class="whitepaper-cover">
+                <img src="https://via.placeholder.com/600x800/0f0f0f/00d4ff?text=Scaling+Beyond+Limits%0AGeometric+Coordination+for%0ATrillion-Scale+Systems" alt="Whitepaper Cover: Scaling Beyond Limits">
+            </div>
+            <h3>Scaling Beyond Limits:<br>Geometric Coordination for Trillion-Scale Systems</h3>
+            <p style="max-width: 800px; margin: 2rem auto; color: var(--secondary);">
+                Mathematical foundations proving logarithmic scaling, 1000:1 compression of coordination state, and uniqueness guarantees that prevent failure in systems with trillions of agents.
+            </p>
+            <a href="/GeometricScaling_Whitepaper.pdf" class="cta-button" target="_blank">Download PDF (16 pages)</a>
+        </div>
+    </section>
+
+    <section class="form-section" id="contact">
+        <div class="form-container">
+            <h2 class="section-title">Learn More</h2>
+            <p>Receive updates on our research, patent developments, and early access opportunities.</p>
+            <form action="https://formspree.io/f/your-form-id" method="POST">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="organization" placeholder="Organization">
+                <input type="text" name="role" placeholder="Role">
+                <textarea name="message" rows="5" placeholder="How can we help you? (e.g., technical discussion, partnership, whitepaper access)"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Entropy Systems. All rights reserved.</p>
+        <p>contact: elliot.east@enthropysystems.com | www.enthropysystems.com</p>
+    </footer>
 
 </body>
 </html>
+
+
+You can deploy this directly on Vercel/Netlify by saving as `index.html`. Replace the placeholder image URL with the actual cover image or hosted PDF preview if desired.
