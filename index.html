@@ -1,173 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enthropy Systems | Geometric Intelligence for the Next Frontier</title>
-    <meta name="description" content="Enthropy Systems pioneers geometric coordination for trillion-scale systems through three integrated lines of business: Sensors, Materials, and Methods.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #0f0f0f;
-            --text: #f0f0f0;
-            --accent: #00d4ff;
-            --secondary: #a0a0a0;
-            --card-bg: #1a1a1a;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-        }
-        header {
-            padding: 2rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #2a2a2a;
-        }
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-        }
-        .logo span {
-            color: var(--accent);
-        }
-        nav a {
-            color: var(--secondary);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: var(--accent);
-        }
-        .hero {
-            padding: 8rem 5% 6rem;
-            text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-        }
-        .hero p {
-            font-size: 1.3rem;
-            color: var(--secondary);
-            max-width: 800px;
-            margin: 0 auto 3rem;
-        }
-        .cta-button {
-            display: inline-block;
-            background: var(--accent);
-            color: #000;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,212,255,0.3);
-        }
-        .business-lines {
-            padding: 6rem 5%;
-            background: #111;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 4rem;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 2.5rem;
-        }
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 2.5rem;
-            border: 1px solid #2a2a2a;
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent);
-        }
-        .card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: var(--accent);
-        }
-        footer {
-            padding: 3rem 5%;
-            text-align: center;
-            border-top: 1px solid #2a2a2a;
-            color: var(--secondary);
-            font-size: 0.9rem;
-        }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            header { flex-direction: column; gap: 1rem; }
-            nav a { margin: 0 1rem; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enthropy Systems — Invariant Limits of Complex Systems</title>
+  <meta name="description" content="Independent research into structural constraints on global consistency, degradation, and cyclic behavior in large-scale systems."/>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --text: #e0e0e0;
+      --accent: #00d4ff;
+      --muted: #777;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 5vw;
+    }
+    header {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 4rem 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.7));
+    }
+    h1 {
+      font-size: clamp(4.5rem, 12vw, 9rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 0.92;
+      margin-bottom: 1.5rem;
+    }
+    .subtitle {
+      font-size: clamp(1.8rem, 5vw, 3.2rem);
+      font-weight: 300;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .hero-sub {
+      font-size: 1.4rem;
+      max-width: 800px;
+      color: var(--muted);
+      margin: 2rem 0 4rem;
+    }
+    section {
+      padding: 8rem 0;
+      text-align: center;
+    }
+    h2 {
+      font-size: 3.5rem;
+      margin-bottom: 2rem;
+      font-weight: 700;
+    }
+    .content {
+      font-size: 1.35rem;
+      max-width: 780px;
+      margin: 0 auto;
+      color: #bbb;
+    }
+    .what-is, .what-not, .focus, .status {
+      margin-bottom: 6rem;
+    }
+    .highlight {
+      color: var(--accent);
+      font-weight: 500;
+    }
+    footer {
+      text-align: center;
+      padding: 4rem 0;
+      color: var(--muted);
+      font-size: 1.1rem;
+      border-top: 1px solid #222;
+    }
+    @media (max-width: 768px) {
+      h1 { font-size: 6rem; }
+      h2 { font-size: 2.8rem; }
+      section { padding: 6rem 0; }
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">Enthropy<span>Systems</span></div>
-        <nav>
-            <a href="#business">Lines of Business</a>
-        </nav>
-    </header>
+  <header>
+    <div class="container">
+      <h1>Enthropy Systems</h1>
+      <div class="subtitle">Invariant Limits of Complex Systems</div>
+      <p class="hero-sub">
+        Independent research into structural constraints on global consistency, degradation, and cyclic behavior in large-scale systems.
+      </p>
+    </div>
+  </header>
 
-    <section class="hero">
-        <h1>Measuring What Others Cannot See</h1>
-        <p>Enthropy Systems pioneers the next frontier of intelligence through geometric perception of the substrate that coordinates everything — from trillion-scale distributed systems to emerging heterogeneous hardware.</p>
-        <p>We deliver this vision through three integrated lines of business:</p>
-        <a href="#business" class="cta-button">Explore Our Three Lines</a>
+  <main class="container">
+
+    <section class="what-is">
+      <h2>What this is</h2>
+      <p class="content">
+        Enthropy Systems is an independent research effort focused on identifying <span class="highlight">invariant constraints</span> that govern the behavior of large-scale, heterogeneous systems.
+      </p>
     </section>
 
-    <section class="business-lines" id="business">
-        <div class="container">
-            <h2 class="section-title">Three Lines of Business</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Sensors</h3>
-                    <p>Purpose-built geometric instruments that natively detect holonomy accumulation, free-energy curvature, and sheaf consistency — phenomena invisible to conventional statistical sensors. These enable early detection of phase transitions, Byzantine behavior, and subspace alignment in complex systems.</p>
-                </div>
-                <div class="card">
-                    <h3>Materials</h3>
-                    <p>Next-generation substrates optimized for geometric coherence. We design and characterize materials that support intrinsic holonomy bounds, topological protection, and entropy-weighted phase behavior — creating hardware foundations for coordination without message-passing overhead.</p>
-                </div>
-                <div class="card">
-                    <h3>Methods</h3>
-                    <p>Patented geometric coordination frameworks (provisional patents 1a–5a) for orchestration across classical, neural, neuromorphic, and quantum strata. Proven logarithmic scaling, formal consistency guarantees, and leading indicators for trillion-scale distributed intelligence.</p>
-                </div>
-            </div>
-        </div>
+    <section class="what-not">
+      <h2>What this is not</h2>
+      <p class="content">
+        This is not a product company, consultancy, or applied engineering firm. Applications are used solely to establish enablement and generality.
+      </p>
     </section>
 
-    <footer>
-        <p>&copy; 2026 Enthropy Systems, a division of AFX Colombia S.A.S. All rights reserved. contact: elliot.east@enthropysystems.com</p>
-    </footer>
+    <section class="focus">
+      <h2>Current focus</h2>
+      <p class="content">
+        Mapping and protecting IP around invariant-based system architectures, supported by extensive simulations and formal (<span class="highlight">Lean 4</span>) reasoning.
+      </p>
+    </section>
+
+    <section class="status">
+      <h2>Status</h2>
+      <p class="content">
+        Work is ongoing. Selected discussion occur privately.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 Enthropy Systems — All rights reserved
+  </footer>
 
 </body>
 </html>
