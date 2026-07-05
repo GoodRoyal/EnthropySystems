@@ -92,6 +92,13 @@
       section { padding: 6rem 0; }
     }
   </style>
+  <style>
+    .paper-list { list-style: none; margin-top: 1.2rem; }
+    .paper-list li { margin-bottom: 1.1rem; }
+    .paper-list a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .paper-list a:hover { text-decoration: underline; }
+    .paper-note { color: var(--muted); font-size: 0.92rem; }
+  </style>
 </head>
 <body>
 
@@ -126,6 +133,31 @@
       <p class="content">
         Mapping and protecting IP around invariant-based system architectures, supported by extensive simulations and formal (<span class="highlight">Lean 4</span>) reasoning.
       </p>
+    </section>
+
+    <section class="papers">
+      <h2>Papers</h2>
+      <p class="content">
+        Six preprints, part of one program on <span class="highlight">structural
+        invariants under lossy translation</span> — from a distribution-free
+        calibration certificate to the operator-algebraic rigidity behind it, with
+        formal (<span class="highlight">Lean 4</span>) proofs where stated and
+        reproducible numerics throughout.
+      </p>
+      <ul class="paper-list">
+        <li><a href="papers/paper1-frustration-certificates.pdf">Frustration Certificates for Independently Calibrated Sensor Systems</a><br/>
+          <span class="paper-note">A distribution-free certificate for calibration inconsistency, validated on two fusion machines under one untuned pipeline.</span></li>
+        <li><a href="papers/paper2-lossy-cocycles.pdf">Stability of Almost-Flat Lossy Cocycles: an Index Obstruction Survives Rank Loss</a><br/>
+          <span class="paper-note">Stability of almost-representations extended to non-invertible targets; the index obstruction persists through rank loss.</span></li>
+        <li><a href="papers/paper3-undetectable-unremovable.pdf">Undetectable but Unremovable: Capacity versus Topology in Lossy Networks</a><br/>
+          <span class="paper-note">A topological charge that falls below every local detection threshold yet cannot be locally removed.</span></li>
+        <li><a href="papers/paper4-formalized-debugging.pdf">Formalized Mathematics as a Debugging Tool</a><br/>
+          <span class="paper-note">Lean 4 formalization as an active research instrument — catching two errors in opposite directions.</span></li>
+        <li><a href="papers/paper5-three-gaps-one-index.pdf">Three Gaps, One Index</a><br/>
+          <span class="paper-note">The m-uniform rigidity of a lossy magnetic pair is topological, not spectral; a codimension theorem for the constant.</span></li>
+        <li><a href="papers/paper6-quality-flag-audit.pdf">What a Quality Flag Does Not Encode</a><br/>
+          <span class="paper-note">A pre-registered certificate audit of a documented MAST magnetics changepoint: what archive quality flags do and don't mean.</span></li>
+      </ul>
     </section>
 
     <section class="status">
